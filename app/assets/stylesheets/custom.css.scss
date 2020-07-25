@@ -1,5 +1,14 @@
 @import "semantic-ui";
+$green:#016936;
 
 .chatbox {
     height:450px;
+}
+
+.link-reset {
+    text-decoration: none;
+    color:rgba(0, 0, 0, 0.87);
+    &:hover {
+        color:rgba(0, 0, 0, 0.897);
+    }
 }

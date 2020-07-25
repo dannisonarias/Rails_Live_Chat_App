@@ -8,14 +8,14 @@
         </div>
       </div>
       <div class="extra content">
-        <form class="ui reply form">
+        <%=form_with url: "/message" ,class:"ui reply form",local: true, method:"post" do |f|%>
           <div class="field">
             <div class="ui flui icon input">
-              <input type="text" placeholder="Enter a message...">
-              <i class="bordered inverted red edit icon"></i>
+              <%= f.text_field :body, placeholder:"Enter a message..."%>
+              <%= f.button '<i class="bordered inverted red edit icon"></i>'.html_safe%>
             </div>
           </div>
-        </form>
+        <%end%>
       </div>
     </div>
   </div>
