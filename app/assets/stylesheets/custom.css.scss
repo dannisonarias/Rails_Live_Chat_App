@@ -13,6 +13,14 @@ $green:#016936;
     }
 }
 
+.link-reset2 {
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.87);
+    &:hover {
+        color:rgba(255, 255, 255, 0.897);
+    }
+}
+
 #messages {
     height: 15em;
     overflow: auto;
@@ -20,4 +28,8 @@ $green:#016936;
 
 .input button {
     display: none;
+}
+
+.mt-2 {
+    margin-top: 20px !important;
 }

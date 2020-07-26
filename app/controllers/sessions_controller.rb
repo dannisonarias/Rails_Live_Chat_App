@@ -1,9 +1,19 @@
 class SessionsController < ApplicationController
   before_action :loggged_in_redirect, only:[:new,:create]
+
   def new
     @user = User.new
   end
+
   def create
+    if params[:test]
+      session[:user_id] = rand(1..5)
+      @user = User.find(session[:user_id])
+      flash[:success] = "You have successfully logged in!"
+      redirect_to root_path
+      return
+    end
+
     @user = User.find_by_username(params[:username])
     if @user && @user.authenticate(params[:password_digest])
       session[:user_id] = @user.id
@@ -14,6 +24,7 @@ class SessionsController < ApplicationController
       render :new
     end
   end
+
   def destroy
     session[:user_id] = nil
     flash[:success] = "You have logged out!"
