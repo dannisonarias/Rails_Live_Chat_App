@@ -4,4 +4,6 @@ connected: ->
 disconnected: ->
 
 received: (data)->
-    $('#message-container').append data.foo
+    $('#message-container').append data.mod_message
+    element = document.getElementById("messages");
+    element.scrollTop = element.scrollHeight;

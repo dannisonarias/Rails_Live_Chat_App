@@ -6,6 +6,7 @@ class MessagesController < ApplicationController
     if @message.save
       ActionCable.server.broadcast "chatroom_channel",
       mod_message: message_render(@message)
+    end
   end
 
   private
