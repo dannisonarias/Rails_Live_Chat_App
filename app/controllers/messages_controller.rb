@@ -5,14 +5,17 @@ class MessagesController < ApplicationController
     @message = current_user.messages.build(body:message_params)
     if @message.save
       ActionCable.server.broadcast "chatroom_channel",
-      foo: @message.body
-    end
+      mod_message: message_render(@message)
   end
 
   private
 
   def message_params
     params.require(:body)
+  end
+  
+  def message_render(message)
+      render(partial: 'message', locals: {message: message})
   end
 
 end
