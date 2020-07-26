@@ -18,6 +18,15 @@
 //= require_tree .
 
 
+submit_message = () => {
+  $('#body').on('keydown',function(e){
+    if (e.keyCode == 13){
+      $('button').click();
+      e.target.value = "";
+    }
+  })
+}
+
 scroll_bottom = () => {
   if ($('#message-container').length > 0){
       $('#messages').scrollTop($('#messages')[0].scrollHeight)
@@ -36,4 +45,5 @@ $(document).on('turbolinks:load',function(){
     ;
   })
   scroll_bottom();
+  submit_message();
 });
