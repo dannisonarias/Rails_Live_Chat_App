@@ -14,7 +14,13 @@
       <%end%>
     </div>
   </div>
-  <div class="item">
-    <%=link_to "Sign up", sign_up_path, class: "item link-reset sign-link"%>
-  </div>
+  <%if !logged_in?%>
+    <div class="item">
+      <%=link_to "Sign up", sign_up_path, class: "link-reset sign-link"%>
+    </div>
+  <%else%>
+    <div class="item">
+      <p>Logged in as <%=current_user.username%></p>
+    </div>
+  <%end%>
 </div>
