@@ -10,11 +10,11 @@
         <%=link_to 'Logout', logout_path, method: :delete, class:'item'%>
       <%else%>
         <%=link_to "Log in", login_path, class: "item"%>
-        <%=link_to "Sign up", sign_up_path, class: "item"%>
+        <%=link_to "Sign up", sign_up_path, class: "item sign-link"%>
       <%end%>
     </div>
   </div>
   <div class="item">
-    <%=link_to "Sign up", sign_up_path, class: "item link-reset"%>
+    <%=link_to "Sign up", sign_up_path, class: "item link-reset sign-link"%>
   </div>
 </div>

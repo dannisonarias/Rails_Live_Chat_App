@@ -16,6 +16,7 @@
     </div>
     <div class="ui  container">
       <%= render 'layouts/messages'%>
+      <%=render 'layouts/signup_form' if !logged_in?%>
       <%= yield %>
     </div>
     <%# <%=console if Rails.env.development?%>

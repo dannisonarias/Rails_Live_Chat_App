@@ -27,12 +27,12 @@
       <% end %>
     </div>
     <div class="middle aligned column">
-      <div class="ui big button">
+      <div class="ui big button sign-link">
         <i class="signup icon"></i>
         <%=link_to "Sign up", sign_up_path, class: "item link-reset"%>
       </div>
       <div class="ui green big button mt-2">
-        <i><%= link_to "Log me in With Test Account", login_path(test: 'testaccount'),class:"link-reset2", method: :post%>
+        <i><%= link_to "Use Test Account", login_path(test: 'testaccount'),class:"link-reset2", method: :post%>
         </i>
       </div>
     </div>

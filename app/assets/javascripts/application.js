@@ -19,6 +19,7 @@
 
 
 submit_message = () => {
+  // submits chatroom message when 'enter' is pressed
   $('#body').on('keydown',function(e){
     if (e.keyCode == 13){
       $('button').click();
@@ -28,9 +29,27 @@ submit_message = () => {
 }
 
 scroll_bottom = () => {
+  // automatically keeps the chatroom scrolled to the bottom
   if ($('#message-container').length > 0){
       $('#messages').scrollTop($('#messages')[0].scrollHeight)
   }
+}
+
+
+
+showSignUpForm = (e) => {
+  // reveal signup form modal
+  e.preventDefault();
+  console.log(e)
+  $('.ui.modal')
+  .modal('show');
+}
+
+signUpListner = () => {
+  // listen for click on signup links
+  document.querySelectorAll('.sign-link').forEach(signUpLink => {
+    signUpLink.addEventListener('click', showSignUpForm)
+  })
 }
 
 $(document).on('turbolinks:load',function(){
@@ -46,4 +65,5 @@ $(document).on('turbolinks:load',function(){
   })
   scroll_bottom();
   submit_message();
+  signUpListner();
 });
