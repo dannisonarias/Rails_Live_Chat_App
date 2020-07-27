@@ -4,14 +4,14 @@
     Sign up form
   </div>
   <div class="content">
-    <form class="ui form">
+    <%= form_with url: "/signup", class:"ui form",method: :post do |form| %>
       <div class="field">
-        <label>Username</label>
-        <input type="text" name="first-name" placeholder="Username">
+        <%=label_tag 'Username'%>
+        <%= form.text_field :username, placeholder:"Username" %>
       </div>
       <div class="field">
-        <label>Password</label>
-        <input type="text" name="last-name" placeholder="Password">
+        <%=label_tag 'Password'%>
+        <%= form.text_field :password_digest, placeholder:"Password" %>
       </div>
       <div class="field">
         <div class="ui checkbox">
@@ -23,8 +23,11 @@
         <div class="ui black deny button">
           Cancel
         </div>
-        <button class="ui positive right labeled icon button" type="submit">Submit<i class="checkmark icon"></i></button>
+        <div class="ui green positive right labeled icon button">
+          <a id="submit" class="link-reset2">Submit</a>
+          <i class="checkmark icon"></i>
+        </div>
       </div>
-    </form>
+    <%end%>
   </div>
 </div>

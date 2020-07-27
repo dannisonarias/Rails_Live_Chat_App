@@ -6,14 +6,17 @@ class SessionsController < ApplicationController
   end
 
   def create
+    # test account login
     if params[:test]
+      # random account from 1-5 in database
       session[:user_id] = rand(1..5)
       @user = User.find(session[:user_id])
       flash[:success] = "You have successfully logged in!"
       redirect_to root_path
       return
     end
-
+    
+    # actual account session login
     @user = User.find_by_username(params[:username])
     if @user && @user.authenticate(params[:password_digest])
       session[:user_id] = @user.id

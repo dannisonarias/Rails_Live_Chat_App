@@ -28,6 +28,7 @@ submit_message = () => {
   })
 }
 
+
 scroll_bottom = () => {
   // automatically keeps the chatroom scrolled to the bottom
   if ($('#message-container').length > 0){
@@ -35,14 +36,20 @@ scroll_bottom = () => {
   }
 }
 
-
+//****************** Sign up form ******************
+// listens for Sign up form submission
+submitListner = () => {
+  $('#submit').click(() => {
+    $('form').submit();
+  });
+}
 
 showSignUpForm = (e) => {
   // reveal signup form modal
   e.preventDefault();
-  console.log(e)
   $('.ui.modal')
   .modal('show');
+  submitListner();
 }
 
 signUpListner = () => {
@@ -51,6 +58,7 @@ signUpListner = () => {
     signUpLink.addEventListener('click', showSignUpForm)
   })
 }
+//****************** Sign up form ******************
 
 $(document).on('turbolinks:load',function(){
     $('.ui.dropdown')
