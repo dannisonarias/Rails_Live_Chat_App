@@ -2,34 +2,36 @@
 $green:#016936;
 
 .chatbox {
-    height:450px;
+  height: 450px;
 }
 
 .link-reset {
-    text-decoration: none;
-    color:rgba(0, 0, 0, 0.87);
-    &:hover {
-        color:rgba(0, 0, 0, 0.897);
-    }
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87);
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.897);
+  }
 }
 
 .link-reset2 {
-    text-decoration: none;
-    color:rgba(255, 255, 255, 0.87);
-    &:hover {
-        color:rgba(255, 255, 255, 0.897);
-    }
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.87);
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.897);
+  }
 }
 
 #messages {
-    height: 15em;
-    overflow: auto;
+  height: 15em;
+  overflow: auto;
 }
 
 .input button {
-    display: none;
+  display: none;
 }
 
 .mt-2 {
-    margin-top: 20px !important;
+  margin-top: 20px !important;
 }
