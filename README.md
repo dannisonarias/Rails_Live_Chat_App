@@ -1,24 +1,56 @@
-# README
+# Live Chat application using action cable
+Application is a live chat system using ruby on rails and action cable
+user can create an account,sign up, and begin chatting with others.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![sample](ss.png)
 
-Things you may want to cover:
+# Install
+1. Install 
 
-* Ruby version
+> $ git clone <respositoryURL>
 
-* System dependencies
+2. Bundle install
 
-* Configuration
+> $ bundle install
 
-* Database creation
+# Use
 
-* Database initialization
+1. start the rails server
 
-* How to run the test suite
+> $ rails server
 
-* Services (job queues, cache servers, search engines, etc.)
+2. Go to browser and visit 
 
-* Deployment instructions
+> http://localhost:3000/
 
-* ...
+## Built With
+
+- Ruby on Rails
+- VSCode
+
+## Author
+
+👤 **Dannison Arias**
+
+- Github: [@dannisonarias](https://github.com/dannisonarias)
+- Twitter: [@AriasDannison](https://twitter.com/AriasDannison)
+- Linkedin: [Dannison Arias](https://www.linkedin.com/in/dannison-arias-777919190/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- The Odin Project
+
+## 📝 License
+
+This project is [MIT](./license.md) licensed.
