@@ -1,7 +1,7 @@
 class ChatActionCable < ActionCable::Connection::WebSocket
-  def initialize(app, options={})
+  def initialize(app, _options = {})
     @app = app
- end
+  end
 
   def call(env)
     if ::WebSocket::Driver.websocket?(env)
