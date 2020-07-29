@@ -2,6 +2,12 @@
 Application is a live chat system using ruby on rails and action cable
 user can create an account,sign up, and begin chatting with others.
 
+# Application live link
+
+Warning: live links on heroku take up to 1min to load.
+
+[Heroku-Live-Link](https://dannylivechatapp.herokuapp.com/)
+
 ![sample](ss.png)
 
 # Install
