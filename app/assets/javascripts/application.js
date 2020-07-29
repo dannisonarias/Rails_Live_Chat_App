@@ -11,6 +11,67 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
 //= require activestorage
 //= require turbolinks
+//= require semantic-ui
 //= require_tree .
+
+
+submit_message = () => {
+  // submits chatroom message when 'enter' is pressed
+  $('#body').on('keydown',function(e){
+    if (e.keyCode == 13){
+      $('button').click();
+      e.target.value = "";
+    }
+  })
+}
+
+
+scroll_bottom = () => {
+  // automatically keeps the chatroom scrolled to the bottom
+  if ($('#message-container').length > 0){
+      $('#messages').scrollTop($('#messages')[0].scrollHeight)
+  }
+}
+
+//****************** Sign up form ******************
+// listens for Sign up form submission
+submitListner = () => {
+  $('#submit').click(() => {
+    $('form').submit();
+  });
+}
+
+showSignUpForm = (e) => {
+  // reveal signup form modal
+  e.preventDefault();
+  $('.ui.modal')
+  .modal('show');
+  submitListner();
+}
+
+signUpListner = () => {
+  // listen for click on signup links
+  document.querySelectorAll('.sign-link').forEach(signUpLink => {
+    signUpLink.addEventListener('click', showSignUpForm)
+  })
+}
+//****************** Sign up form ******************
+
+$(document).on('turbolinks:load',function(){
+    $('.ui.dropdown')
+    .dropdown()
+    ;
+    $('.message .close')
+  .on('click', function() {
+    $(this)
+      .closest('.message')
+      .transition('fade')
+    ;
+  })
+  scroll_bottom();
+  submit_message();
+  signUpListner();
+});

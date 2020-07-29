@@ -2,14 +2,23 @@
 <html>
   <head>
     <title>RailsLiveChat</title>
+    <%=favicon_link_tag%>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <div class="ui small menu inverted">
+      <div class="ui  container">
+        <%= render 'layouts/navigation'%>
+      </div>
+    </div>
+    <div class="ui  container">
+      <%= render 'layouts/messages'%>
+      <%=render 'layouts/signup_form' if !logged_in?%>
+      <%= yield %>
+    </div>
+    <%=console if Rails.env.development?%>
   </body>
 </html>

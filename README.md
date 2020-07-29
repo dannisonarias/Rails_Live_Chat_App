@@ -1,24 +1,62 @@
-# README
+# Live Chat application using action cable
+Application is a live chat system using ruby on rails and action cable
+user can create an account,sign up, and begin chatting with others.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Application live link
 
-Things you may want to cover:
+Warning: live links on heroku take up to 1min to load.
 
-* Ruby version
+[Heroku-Live-Link](https://dannylivechatapp.herokuapp.com/)
 
-* System dependencies
+![sample](ss.png)
 
-* Configuration
+# Install
+1. Install 
 
-* Database creation
+> $ git clone <respositoryURL>
 
-* Database initialization
+2. Bundle install
 
-* How to run the test suite
+> $ bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+# Use
 
-* Deployment instructions
+1. start the rails server
 
-* ...
+> $ rails server
+
+2. Go to browser and visit 
+
+> http://localhost:3000/
+
+## Built With
+
+- Ruby on Rails
+- VSCode
+
+## Author
+
+👤 **Dannison Arias**
+
+- Github: [@dannisonarias](https://github.com/dannisonarias)
+- Twitter: [@AriasDannison](https://twitter.com/AriasDannison)
+- Linkedin: [Dannison Arias](https://www.linkedin.com/in/dannison-arias-777919190/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- The Odin Project
+
+## 📝 License
+
+This project is [MIT](./license.md) licensed.

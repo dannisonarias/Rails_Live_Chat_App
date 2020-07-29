@@ -1,0 +1,39 @@
+<%=render 'layouts/centericon'%>
+<div class="ui two column grid">
+  <div class="twelve wide column">
+    <div class="ui fluid raised card chatbox">
+      <div class="content" id="messages">
+        <div class="ui feed" id='message-container'>
+          <%=render @messages%>
+        </div>
+      </div>
+      <div class="extra content">
+        <%=form_with url: "/message" ,class:"ui reply form",remote: true, method:"post" do |f|%>
+          <div class="field">
+            <div class="ui flui icon input">
+              <%= f.text_field :body, placeholder:"Enter a message..."%>
+              <%= f.button '<i class="bordered inverted red edit icon"></i>'.html_safe%>
+            </div>
+          </div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+  <div class="four wide column">
+    <div class="ui fluid raised card chatbox">
+      <div class="content">
+        <div class="ui inverted vertical menu">
+          <a class="active item">
+            Home
+          </a>
+          <a class="item">
+            Messages
+          </a>
+          <a class="item">
+            Friends
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

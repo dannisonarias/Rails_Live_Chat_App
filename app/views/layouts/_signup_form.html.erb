@@ -1,0 +1,33 @@
+<div class="ui mini modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Sign up form
+  </div>
+  <div class="content">
+    <%= form_with url: "/signup", class:"ui form",method: :post do |form| %>
+      <div class="field">
+        <%=label_tag 'Username'%>
+        <%= form.text_field :username, placeholder:"Username" %>
+      </div>
+      <div class="field">
+        <%=label_tag 'Password'%>
+        <%= form.text_field :password_digest, placeholder:"Password" %>
+      </div>
+      <div class="field">
+        <div class="ui checkbox">
+          <input type="checkbox" checked="true" tabindex="0" class="hidden">
+          <label>I agree to the Terms and Conditions</label>
+        </div>
+      </div>
+      <div class="actions">
+        <div class="ui black deny button">
+          Cancel
+        </div>
+        <div class="ui green positive right labeled icon button">
+          <a id="submit" class="link-reset2">Submit</a>
+          <i class="checkmark icon"></i>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
